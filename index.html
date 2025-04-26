@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<form class="subscribe-form"><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -65,10 +65,26 @@
     <div class="max-w-2xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-semibold" data-en="Request Early Access" data-de="Frühen Zugang anfragen">Request Early Access</h2>
       <p class="mt-2 mb-6 text-lg" data-en="Be the first to join our waitlist and fund the next generation of EU SMEs." data-de="Seien Sie der Erste auf unserer Warteliste und finanzieren Sie die nächste Generation europäischer KMU.">Be the first to join our waitlist and fund the next generation of EU SMEs.</p>
-      <form action="#" method="POST" class="flex flex-col sm:flex-row gap-4 justify-center">
-        <input type="email" name="email" placeholder="Enter your email" data-en="Enter your email" data-de="Geben Sie Ihre E-Mail ein" required class="w-full sm:w-auto px-4 py-2 border border-gray-300 rounded focus:outline-none">
-        <button type="submit" class="px-6 py-2 bg-indigo-600 text-white font-semibold rounded hover:bg-indigo-700" data-en="Notify Me" data-de="Benachrichtigen Sie mich">Notify Me</button>
-      </form>
+<form action="https://formspree.io/f/xpzbkwab" method="POST" class="subscribe-form flex flex-col sm:flex-row justify-center items-center gap-4" id="form">
+  <input
+    type="email"
+    name="email"
+    placeholder="Enter your email"
+    required
+    class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full sm:w-auto"
+  >
+  <button
+    type="submit"
+    class="px-6 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition"
+  >
+    Subscribe
+  </button>
+
+  <!-- Hidden fields -->
+  <input type="text" name="_gotcha" style="display:none">
+  <input type="hidden" name="_redirect" value="https://fundwaltz.com/thank-you.html">
+</form>
+
     </div>
   </section>
 
