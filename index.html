@@ -66,32 +66,47 @@
       <h2 class="text-3xl font-semibold" data-en="Request Early Access" data-de="Frühen Zugang anfragen">Request Early Access</h2>
       <p class="mt-2 mb-6 text-lg" data-en="Be the first to join our waitlist and fund the next generation of EU SMEs." data-de="Seien Sie der Erste auf unserer Warteliste und finanzieren Sie die nächste Generation europäischer KMU.">Be the first to join our waitlist and fund the next generation of EU SMEs.</p>
 <form
-  action="https://formspree.io/f/xpzbkwab"
+  action="https://formspree.io/f/xdkgkznb"
   method="POST"
-  class="subscribe-form flex flex-col sm:flex-row justify-center items-center gap-4"
-  id="form"
+  class="max-w-md mx-auto bg-white p-6 rounded-lg shadow space-y-4"
 >
   <!-- Email Field -->
-  <input
-    type="email"
-    name="email"
-    placeholder="Enter your email"
-    required
-    class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full sm:w-auto"
-  />
+  <label class="block">
+    <span class="block text-gray-700 font-medium mb-1">Your email:</span>
+    <input
+      type="email"
+      name="email"
+      required
+      placeholder="you@example.com"
+      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+    />
+  </label>
+
+  <!-- Message Field -->
+  <label class="block">
+    <span class="block text-gray-700 font-medium mb-1">Your message:</span>
+    <textarea
+      name="message"
+      required
+      placeholder="Write your message here..."
+      rows="4"
+      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+    ></textarea>
+  </label>
+
+  <!-- Hidden Fields -->
+  <input type="text" name="_gotcha" style="display: none" />
+  <input type="hidden" name="_redirect" value="https://fundwaltz.com/thank-you.html" />
 
   <!-- Submit Button -->
   <button
     type="submit"
-    class="px-6 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition"
+    class="w-full py-2 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition"
   >
-    Subscribe
+    Send
   </button>
-
-  <!-- Hidden Anti-spam + Redirect Fields -->
-  <input type="text" name="_gotcha" style="display: none" />
-  <input type="hidden" name="_redirect" value="https://fundwaltz.com/thank-you.html" />
 </form>
+
 
     </div>
   </section>
