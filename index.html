@@ -46,3 +46,88 @@
           <h3 class="text-xl font-semibold mb-2">Data-Driven Risk Analysis</h3>
           <p>We use AI (Mistral) to evaluate SME applications and assign risk-based financing terms automatically.</p>
         </div>
+        <div class="p-6 bg-white rounded shadow">
+          <div class="text-4xl mb-4">🔗</div>
+          <h3 class="text-xl font-semibold mb-2">Smart Contract Deals</h3>
+          <p>Each funding agreement is secured and executed on-chain using Polygon or Stellar smart contracts.</p>
+        </div>
+        <div class="p-6 bg-white rounded shadow">
+          <div class="text-4xl mb-4">😶️</div>
+          <h3 class="text-xl font-semibold mb-2">Revenue Sharing</h3>
+          <p>SMEs repay monthly based on real revenue – investors earn fair, transparent returns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Early Access Form -->
+  <section id="early-access" class="py-16 bg-indigo-100">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-semibold">Request Early Access</h2>
+      <p class="mt-2 mb-6 text-lg">Be the first to join our waitlist and fund the next generation of EU SMEs.</p>
+      <form
+        action="https://formspree.io/f/xdkgkznb"
+        method="POST"
+        class="max-w-md mx-auto bg-white p-6 rounded-lg shadow space-y-4"
+      >
+        <label class="block">
+          <span class="block text-gray-700 font-medium mb-1">Your email:</span>
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="you@example.com"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+        </label>
+
+        <label class="block">
+          <span class="block text-gray-700 font-medium mb-1">Your message:</span>
+          <textarea
+            name="message"
+            required
+            placeholder="Write your message here..."
+            rows="4"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          ></textarea>
+        </label>
+
+        <input type="text" name="_gotcha" style="display: none" />
+        <input type="hidden" name="_redirect" value="https://fundwaltz.com/thank-you.html" />
+
+        <button
+          type="submit"
+          class="w-full py-2 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition"
+        >
+          Send
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-8 border-t border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 text-center text-sm text-gray-500">
+      <p>&copy; 2025 FundWaltz GmbH. All rights reserved.</p>
+      <p class="mt-2">Contact us: hello@fundwaltz.com</p>
+      <div class="absolute right-4 top-4">
+        <a href="mailto:hello@fundwaltz.com" class="text-sm text-indigo-700 hover:underline">hello@fundwaltz.com</a>
+      </div>
+      <div class="mt-4 flex justify-center space-x-4">
+        <a href="https://facebook.com" class="text-gray-500 hover:text-indigo-600" aria-label="Facebook">Facebook</a>
+        <a href="https://instagram.com" class="text-gray-500 hover:text-indigo-600" aria-label="Instagram">Instagram</a>
+        <a href="https://x.com" class="text-gray-500 hover:text-indigo-600" aria-label="X">X</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('language-switcher').addEventListener('change', function(e) {
+    const lang = e.target.value;
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.innerText = el.dataset[lang];
+    });
+  });
+</script>
+</body>
+</html>
